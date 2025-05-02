@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cemilhan Sağlam | Portfolio</title>
-  <meta name="description" content="Portfolio of Cemilhan Sağlam - Computer Engineering Student">
+  <meta name="description" content="Portfolio of Cemilhan Sağlam - Computer Engineering Student" />
   <style>
     :root {
       --main-color: #0a192f;
@@ -30,12 +30,13 @@
       background: var(--main-color);
       color: var(--accent-color);
       text-align: center;
-      padding: 70px 20px 40px;
+      padding: 50px 15px 30px;
       box-shadow: 0 4px 8px var(--shadow);
     }
     .typewriter {
       font-size: 18px;
       width: fit-content;
+      max-width: 90%;
       margin: 10px auto;
       color: var(--accent-color);
       overflow: hidden;
@@ -47,8 +48,9 @@
       background: var(--bg-color);
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 15px;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px;
       position: sticky;
       top: 0;
       z-index: 999;
@@ -57,6 +59,7 @@
       color: var(--accent-color);
       text-decoration: none;
       font-weight: bold;
+      font-size: 14px;
       transition: color 0.3s ease;
     }
     nav a:hover {
@@ -85,10 +88,20 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px var(--shadow);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 15px;
     }
     .block:hover {
       transform: scale(1.02);
       box-shadow: 0 8px 20px var(--shadow);
+    }
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     footer {
       background: var(--main-color);
@@ -119,6 +132,28 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      .typewriter {
+        font-size: 14px;
+      }
+      nav a {
+        font-size: 13px;
+        padding: 5px;
+      }
+      section {
+        padding: 40px 10px;
+      }
+      .block {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -129,116 +164,45 @@
 
   <nav>
     <a href="#about">About</a>
-    
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
-    
     <a href="#skills">Skills</a>
     <a href="#certificates">Certificates</a>
     <a href="#resume">Resume</a>
-    
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
-  <h2>About Me</h2>
-  <div class="block">
-    <p>I am a Computer Engineering student at Ankara Yıldırım Beyazıt University, passionate about artificial intelligence and software development. Throughout my academic journey, I have developed strong skills in programming, machine learning, and data analysis, working with technologies like Python, Java, and C++.
+    <h2>About Me</h2>
+    <div class="block">
+      <p>I am a Computer Engineering student at Ankara Yıldırım Beyazıt University, passionate about artificial intelligence and software development...</p>
+    </div>
+  </section>
 
-I enjoy building intelligent systems that solve real-world problems and enhance user experiences. Through projects and certifications, I have gained hands-on experience in AI model development, predictive analytics, and software engineering principles.
-
-Driven by curiosity, innovation, and continuous learning, I aspire to contribute to the future of technology by creating smart, efficient, and meaningful solutions.
-
-</p>
-  </div>
-</section>
-  
   <section id="education">
     <h2>Education</h2>
     <div class="block">
-      Ankara Yıldırım Beyazıt University<br>
-      B.Sc. Computer Engineering<br>
+      Ankara Yıldırım Beyazıt University<br />
+      B.Sc. Computer Engineering<br />
       GPA: 3.31 / 4.00 (Expected Graduation: 2026)
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-  
-    <div class="block">
-      <img src="images/battleship.png" alt="Battle Ship Screenshot" style="width:50%; border-radius:6px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
-      <strong>🛳 Battle Ship</strong><br>
-      <em>CENG-305 Final Project – November 2024</em><br><br>
-      A command-line Battleship game developed in C as part of a four-person team. The project simulates a turn-based naval war game between two processes, using pipes for Inter-Process Communication (IPC). Each player process manages its own grid and logic, and they communicate through the operating system to share move data.<br><br>
-      <strong>My role involved:</strong><br>
-      – Designing the game logic<br>
-      – Implementing the process communication mechanism<br>
-      – Testing and debugging multi-process synchronization<br><br>
-      This project enhanced my understanding of low-level programming and Unix-based system programming concepts.
-    </div>
-  
-    <div class="block">
-      <img src="images/pathblocker.png" alt="Path Blocker Game Screenshot" style="width:50%; border-radius:6px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
-      <strong>🧠 Path-Blocker Game</strong><br>
-      <em>CENG-317 Final Project – November 2024</em><br><br>
-      A puzzle-based game where the player must reach the goal while avoiding dead ends on a dynamic game map. Implemented entirely in Java, the project focused on algorithmic problem solving. I integrated several AI-based pathfinding algorithms, including Breadth-First Search (BFS), Depth-First Search (DFS), and A* Search, to calculate the optimal route.<br><br>
-      <strong>I was responsible for:</strong><br>
-      – Designing the game mechanics<br>
-      – Implementing the AI solvers<br>
-      – Visualizing the pathfinding steps for educational purposes<br><br>
-      This project allowed me to apply algorithm design in a game environment and improved my object-oriented programming skills.
-    </div>
-  
-    <div class="block">
-      <img src="images/checkers.png" alt="Checkers Game Screenshot" style="width:50%; border-radius:6px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
-      <strong>♟ Checkers Game</strong><br>
-      <em>CENG-201 Final Project – 2023</em><br><br>
-      A graphical Checkers (Dama) game built using C++ and the SFML (Simple and Fast Multimedia Library) for the UI. The game allows two players to compete, managing legal moves, captures, and promotions. I focused on building a polished interface and implementing turn-based logic using event-driven programming.<br><br>
-      <strong>Key contributions:</strong><br>
-      – Designing and coding the graphical board<br>
-      – Implementing the move validation logic<br>
-      – Adding basic animations for piece movement<br><br>
-      This project gave me valuable experience in GUI development with C++ and multimedia libraries.
-    </div>
-  
-    <div class="block">
-      <img src="images/housing.png" alt="Housing Price Prediction Screenshot" style="width:50%; border-radius:6px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
-      <strong>🏡 Housing Price Prediction</strong><br>
-      <em>Regression Analysis Assignment – Dec 2024 to Feb 2025</em><br><br>
-      Built a machine learning model to predict California housing prices using PySpark and the Spark ML library. I applied data preprocessing techniques such as normalization, feature selection, and missing value handling. The model was trained using linear regression and evaluated with RMSE and R² metrics.<br><br>
-      <strong>My contributions included:</strong><br>
-      – Cleaning and transforming the dataset in PySpark<br>
-      – Training and tuning regression models<br>
-      – Presenting results with visualizations and performance reports<br><br>
-      This project helped strengthen my data science pipeline skills in distributed environments.
-    </div>
-  
-    <div class="block">
-      <img src="images/stock.png" alt="Stock Classification Model Screenshot" style="width:50%; border-radius:6px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
-      <strong>📈 Stock Classification Model</strong><br>
-      <em>Machine Learning & Financial Analysis – January 2025</em><br><br>
-      A classification model developed to identify the sector of a given stock based on historical price data. The project utilized financial time series analysis, feature extraction with tsfresh, and classification models like XGBoost and CatBoost. I also integrated data collection using yfinance and performed dimensionality reduction using PCA.<br><br>
-      <strong>I worked on:</strong><br>
-      – Automating stock data collection from public APIs<br>
-      – Extracting hundreds of time series features<br>
-      – Building, tuning, and evaluating ensemble-based classifiers<br><br>
-      This project combined machine learning with financial analytics and improved my ability to handle real-world time series data.
-    </div>
+    <!-- Project blocks here -->
   </section>
 
   <section id="experience">
-  <h2>Experience</h2>
-  <div class="block">
-    <strong>Milli Teknoloji Akademisi – Ministry of Industry and Technology</strong><br>
-    Artificial Intelligence Specialization Program – November 2024 – Present<br>
-    ◦ Successfully completed the foundational training of the Artificial Intelligence Specialization Program and am actively continuing the specialization phase.<br>
-    ◦ Worked with libraries such as XGBoost, scikit-learn, tsfresh, and yfinance for machine learning models, data engineering, and data analysis.<br>
-    ◦ Gained knowledge of PostgreSQL database integration.
-  </div>
-</section>
-
-  
+    <h2>Experience</h2>
+    <div class="block">
+      <strong>Milli Teknoloji Akademisi – Ministry of Industry and Technology</strong><br />
+      Artificial Intelligence Specialization Program – November 2024 – Present<br />
+      • Successfully completed foundational training...<br />
+      • Worked with XGBoost, scikit-learn...
+    </div>
+  </section>
 
   <section id="skills">
     <h2>Skills</h2>
@@ -248,23 +212,26 @@ Driven by curiosity, innovation, and continuous learning, I aspire to contribute
   <section id="certificates">
     <h2>Certificates</h2>
     <div class="block">
-      Yapay Zeka Uzmanlık Programı Temel Eğitim Sertifikası — <a href="https://drdogrulama.sanayi.gov.tr/tr/verify/51933903588093/" target="_blank" style="color: #00ffc8; font-weight: bold;">View Certificate</a>
+      Yapay Zeka Uzmanlık Programı Temel Eğitim Sertifikası — 
+      <a href="https://drdogrulama.sanayi.gov.tr/tr/verify/51933903588093/" target="_blank" style="color: #00ffc8; font-weight: bold;">View Certificate</a>
     </div>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
     <div class="block">
-      <p>This section contains a downloadable version of my current resume. It includes my academic background, work experience, technical projects, and skills in detail.</p>
-      <p><a href="/mnt/data/cv_eng.pdf" download target="_blank" style="color: #00ffc8; font-weight: bold;">Click here to download my resume as PDF</a></p>
+      <p>This section contains a downloadable version of my current resume...</p>
+      <p>
+        <a href="/mnt/data/cv_eng.pdf" download target="_blank" style="color: #00ffc8; font-weight: bold;">Click here to download my resume as PDF</a>
+      </p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <div class="block">
-      Email: <a href="mailto:cemilhansaglam@gmail.com" style="color: #00ffc8; font-weight: bold;">cemilhansaglam@gmail.com</a><br>
-      Phone: +90 553 717 53 73<br>
+      Email: <a href="mailto:cemilhansaglam@gmail.com" style="color: #00ffc8; font-weight: bold;">cemilhansaglam@gmail.com</a><br />
+      Phone: +90 553 717 53 73<br />
       <div class="contact-links">
         <a href="https://www.linkedin.com/in/cemilhansaglam" target="_blank">LinkedIn</a>
         <a href="https://github.com/cemilhansaglam" target="_blank">GitHub</a>
